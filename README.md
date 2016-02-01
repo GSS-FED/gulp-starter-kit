@@ -2,10 +2,8 @@
 
 Basic starter kit for gulp development. Included Sass, Less, Jade, HTML, Eslint, and browserSync.
 
-Based on [angularjs-gulp-browserify-boilerplate](https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate/) by jakemmarsh.
+Based on [gulp-starter-kit](https://github.com/cjies/gulp-starter-kit) by cjies.
 
-
----
 
 ## About
 
@@ -38,6 +36,7 @@ All Gulp config are written in ```gulp/tasks/config.js```
 
 Dev, Prod & Watch's tasks can be configured in the end of config.js.
 
+
 ## Install
 
 ```
@@ -45,13 +44,16 @@ npm install
 ```
 
 
-## Usage
+## Development
 
 Running Dev server
 
 ```
 npm start
 ```
+
+
+## Deploy
 
 Building Production Code
 
@@ -60,5 +62,16 @@ npm run build
 ```
 
 
+## Test
+
+Run Unit Test 
+
+```
+npm run test
+```
+
+karma設定檔 ```tests/karma.config.js```。
+
+
 ## License
-MIT © [CJies](http://www.cjies.com)
+MIT © [FED](https://github.com/GSS-FED)

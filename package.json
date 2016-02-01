@@ -1,7 +1,7 @@
 {
   "name": "gulp-starter-kit",
   "version": "1.0.2",
-  "author": "CJies Tan <cijies@gmail.com>",
+  "author": "Laura Lee <l443018@gmail.com>",
   "description": "Basic Gulp Starter Kit",
   "main": "gulpfile.js",
   "license": "MIT",
@@ -10,9 +10,7 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "dev": "gulp dev",
     "build": "gulp prod",
-    "prod": "gulp prod",
     "test": "gulp test"
   },
   "dependencies": {},
