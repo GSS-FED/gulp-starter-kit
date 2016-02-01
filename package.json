@@ -1,7 +1,10 @@
 {
   "name": "gulp-starter-kit",
   "version": "1.0.2",
-  "author": "Laura Lee <l443018@gmail.com>",
+  "author": [
+    "Laura Lee <l443018@gmail.com>",
+    "GSS FED <gsscsid@gmail.com>"
+  ],
   "description": "Basic Gulp Starter Kit",
   "main": "gulpfile.js",
   "license": "MIT",

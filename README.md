@@ -70,8 +70,8 @@ Run Unit Test
 npm run test
 ```
 
-karma設定檔 ```tests/karma.config.js```。
+karma config file: ```tests/karma.config.js```。
 
 
 ## License
-MIT © [FED](https://github.com/GSS-FED)
+MIT © [GSS Front End Developer Group](https://github.com/GSS-FED)
