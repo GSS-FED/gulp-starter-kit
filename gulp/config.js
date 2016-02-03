@@ -159,6 +159,7 @@ module.exports = {
  
     vendor: {
       scripts: {
+        // plugin sources
         src: [],
         output: 'vendor.bundle.js',
         dest: 'www/js'

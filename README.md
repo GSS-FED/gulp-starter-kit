@@ -70,7 +70,7 @@ Run Unit Test
 npm run test
 ```
 
-karma config file: ```tests/karma.config.js```。
+Karma config file: ```tests/karma.config.js```。
 
 
 ## License

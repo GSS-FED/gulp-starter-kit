@@ -14,22 +14,20 @@ var pkg          = require('../../package.json');
 
 gulp.task('scripts', function () {
 
-  // Will Concat
-  var willConcat = false;
-  if(config.scripts.output) {
-    willConcat = true;
-  }
+  // Will concat all scripts together (do this in vendor.js)
+  // var willConcat = config.scripts.output? true : false;
 
   return gulp.src(config.scripts.src)
     .pipe(plumber({errorHandler: function(error) {
       handleErrors(error, 'JS');
       this.emit('end');
     }}))
-    .pipe(gulpif(
-      willConcat,
-      concat(config.scripts.output || './somethingfake')
-    ))
-    .pipe(gulpif(global.isProd, uglify() )) // Uglify
+    // .pipe(gulpif(
+    //   willConcat,
+    //   concat(config.scripts.output || './somethingfake')
+    // ))
+    // 將 code 混淆並壓縮
+    .pipe(gulpif( global.isProd, uglify() ))
     .pipe(gulpif(
       global.isProd, 
       header(config.banner.header, {pkg: pkg}) 

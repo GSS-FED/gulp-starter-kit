@@ -14,11 +14,18 @@ var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var pkg          = require('../../package.json');
 
+// -------------------------------------
+//   Combined Vendors
+// -------------------------------------
+
+gulp.task('vendor', ['vendorScripts', 'vendorStyles']);
+
 
 // -------------------------------------
 //   Vendor Scripts
 // -------------------------------------
 
+// 將所有 scripts source 包成一個檔案, 以免開發過程中產生太多檔案
 gulp.task('vendorScripts', function () {
   return gulp.src(config.vendor.scripts.src)
     .pipe(plumber({errorHandler: function(error) {
@@ -53,9 +60,3 @@ gulp.task('vendorStyles', function () {
     .pipe(gulp.dest(config.vendor.styles.dest));
 });
 
-
-// -------------------------------------
-//   Combined Vendors
-// -------------------------------------
-
-gulp.task('vendor', ['vendorScripts', 'vendorStyles']);

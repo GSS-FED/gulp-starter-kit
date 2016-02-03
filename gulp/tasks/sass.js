@@ -26,22 +26,26 @@ gulp.task('sass', function () {
       handleErrors(error, 'SASS');
       this.emit('end');
     }}))
+    // sourcemaps 記錄啟始點
     .pipe(gulpif(createSourceMap, sourcemaps.init()))
     .pipe(sass())
     .pipe(postcss([ 
       autoprefixer(config.sass.autoprefixer)
     ]))
+    // Minify CSS
     .pipe(gulpif(
       global.isProd, 
       postcss([ cssnano(config.sass.cssnano) ]) 
-    ))
+    )) 
+    // sourcemaps 記錄終點
     .pipe(gulpif(
       createSourceMap, 
       sourcemaps.write(createSourceMap ? '.' : null)
     ))
+    // 在 輸出檔案前方加入 Header Banner (使用 package.json 內部的資料)
     .pipe(gulpif(global.isProd, 
       header(config.banner.header, {pkg: pkg}) 
-    )) // Header Banner
+    ))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(gulpif(
       global.isWatching, 

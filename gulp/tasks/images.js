@@ -14,9 +14,12 @@ gulp.task('images', function() {
   var f = filter(config.images.filter, { restore: true })
 
   return gulp.src(config.images.src)
-    .pipe(changed(config.images.dest)) // Ignore unchanged files
-    .pipe(f) // Filtering
+    // Ignore unchanged files
+    .pipe(changed(config.images.dest))
+    // Filtering
+    .pipe(f)
     .pipe(gulpif(global.isProd, imagemin())) // Optimize
+    // get all images files (unfiltered)
     .pipe(f.restore)
     .pipe(gulp.dest(config.images.dest))
     .pipe(gulpif(
