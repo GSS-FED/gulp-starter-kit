@@ -74,4 +74,4 @@ Karma config file: ```tests/karma.config.js```。
 
 
 ## License
-MIT © [GSS Front End Developer Group](https://github.com/GSS-FED)
+MIT © [GSS Front End Department](https://github.com/GSS-FED)
